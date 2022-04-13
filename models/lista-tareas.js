@@ -52,13 +52,13 @@ class Tareas{
 
     }
     get getListado(){
-        let listaClone = {...this.#listado};
+        let listclone = {...this.#listado};
         const listado = [];
-        for(let i in listaClone){
-            if(listaClone[i] instanceof Tarea){
-                const {getId,getCompletado,getDescripcion}= listaClone[i];
-                listaClone[i]={id:getId,completado:getCompletado,descripcion:getDescripcion};
-                listado.push(listaClone[i])
+        for(let i in listclone){
+            if(listclone[i] instanceof Tarea){
+                const {getId,getCompletado,getDescripcion}= listclone[i];
+                listclone[i]={id:getId,completado:getCompletado,descripcion:getDescripcion};
+                listado.push(listclone[i])
             }
         }
         return listado;
